@@ -46,7 +46,7 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <a href="#top" className="flex items-center gap-2.5 font-semibold" aria-label="Back to top">
-          <span className="bg-brand grid size-8 place-items-center rounded-lg text-sm font-bold text-white">HA</span>
+          <span className="grid size-8 place-items-center rounded-lg bg-brand text-sm font-bold text-on-brand">HA</span>
           <span className="tracking-tight">{profile.handle}</span>
         </a>
 
@@ -74,7 +74,7 @@ export function Navbar() {
           {profile.resumeUrl && (
             <a
               href={profile.resumeUrl}
-              className="bg-brand hidden items-center gap-1.5 rounded-lg px-3.5 py-2 text-sm font-medium text-white sm:flex"
+              className="hidden items-center gap-1.5 rounded-lg bg-brand px-3.5 py-2 text-sm font-medium text-on-brand transition-colors hover:bg-brand-strong sm:flex"
             >
               <Download className="size-4" /> Resume
             </a>

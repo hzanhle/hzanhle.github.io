@@ -24,7 +24,7 @@ export function About() {
             return (
               <Reveal key={f.title} delay={i * 0.08}>
                 <div className="card group flex gap-4 p-5 transition-colors hover:border-accent/40">
-                  <span className="bg-brand grid size-11 shrink-0 place-items-center rounded-xl text-white">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-brand-soft text-accent">
                     <Icon className="size-5" />
                   </span>
                   <div>

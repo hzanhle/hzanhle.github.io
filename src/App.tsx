@@ -13,10 +13,7 @@ import { Stats } from "./components/Stats";
 export default function App() {
   return (
     <MotionConfig reducedMotion="user">
-      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[56rem]">
-        <div className="glow absolute inset-0" />
-        <div className="bg-grid absolute inset-0" />
-      </div>
+      <div className="glow pointer-events-none absolute inset-x-0 top-0 -z-10 h-[56rem]" />
       <Navbar />
       <main>
         <Hero />

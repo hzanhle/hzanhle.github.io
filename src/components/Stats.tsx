@@ -31,7 +31,7 @@ export function Stats() {
         {stats.map((s) => (
           <div key={s.label} className="px-6 py-7 text-center">
             <p className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-              <span className="text-gradient">
+              <span>
                 <CountUp to={s.value} />
                 {s.suffix}
               </span>

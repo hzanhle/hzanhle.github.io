@@ -10,7 +10,7 @@ const chips = [
   { label: "C# / .NET", Icon: SiDotnet, color: "#7c4dff", pos: "left-[-6%] top-[18%]", delay: 0 },
   { label: "React", Icon: SiReact, color: "#38bdf8", pos: "right-[-8%] top-[8%]", delay: 0.6 },
   { label: "AWS", Icon: FaAws, color: "#ff9900", pos: "right-[-4%] bottom-[22%]", delay: 1.2 },
-  { label: "AI", Icon: Sparkles, color: "#a78bfa", pos: "left-[-2%] bottom-[8%]", delay: 1.8 },
+  { label: "AI", Icon: Sparkles, color: "#5b9be0", pos: "left-[-2%] bottom-[8%]", delay: 1.8 },
 ];
 
 const now = projects.find((p) => p.period.includes("Now"));
@@ -42,7 +42,7 @@ export function Hero() {
           <motion.h1 {...fade(0.08)} className="mt-6 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
             Hi, I'm{" "}
             <span className="whitespace-nowrap">
-              <span className="text-gradient">{profile.shortName}</span>
+              <span className="text-accent">{profile.shortName}</span>
               <img src={wave} alt="" className="ml-2 inline-block size-10 -translate-y-1 sm:size-12" />
             </span>
           </motion.h1>
@@ -55,7 +55,7 @@ export function Hero() {
           <motion.div {...fade(0.24)} className="mt-8 flex flex-wrap items-center gap-3">
             <a
               href="#projects"
-              className="bg-brand group inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-white shadow-lg shadow-violet-500/25 transition-transform hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 font-semibold text-on-brand transition-colors hover:bg-brand-strong"
             >
               View my work
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
@@ -101,8 +101,8 @@ export function Hero() {
           className="relative mx-auto w-[min(78vw,380px)]"
         >
           <div className="relative aspect-square">
-            <div className="bg-brand absolute inset-0 rounded-full" />
-            <div className="absolute inset-3 rounded-full border border-white/25" />
+            <div className="absolute inset-0 rounded-full bg-brand" />
+            <div className="absolute inset-3 rounded-full border border-white/40 dark:border-white/30" />
             {/* Taller than the circle with only the bottom rounded, so the head pops out of the top. */}
             <div className="absolute inset-x-0 bottom-0 h-[122%] overflow-hidden rounded-b-full">
               <img

@@ -3,16 +3,16 @@ import type { Project } from "../data/profile";
 // Small hand-drawn scenes that stand in for screenshots of private repos.
 function MapScene() {
   const pins = [
-    { x: 92, y: 70, r: 9, c: "#6366f1", label: "Heavy" },
-    { x: 178, y: 104, r: 7, c: "#3b82f6" },
-    { x: 236, y: 58, r: 6, c: "#38bdf8" },
-    { x: 140, y: 134, r: 6, c: "#38bdf8" },
-    { x: 262, y: 128, r: 8, c: "#6366f1" },
+    { x: 92, y: 70, r: 9, c: "#2f6db5", label: "Heavy" },
+    { x: 178, y: 104, r: 7, c: "#5b9be0" },
+    { x: 236, y: 58, r: 6, c: "#8ec3f0" },
+    { x: 140, y: 134, r: 6, c: "#8ec3f0" },
+    { x: 262, y: 128, r: 8, c: "#2f6db5" },
   ];
   return (
     <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" className="h-full w-full" aria-hidden="true">
-      <rect width="320" height="180" fill="#eef2ff" />
-      <path d="M-10 120 C 60 100, 110 150, 180 128 S 290 90, 330 110" fill="none" stroke="#c7d2fe" strokeWidth="14" />
+      <rect width="320" height="180" fill="#f1f6fb" />
+      <path d="M-10 120 C 60 100, 110 150, 180 128 S 290 90, 330 110" fill="none" stroke="#d3e5f6" strokeWidth="14" />
       {[30, 75, 160, 215, 280].map((x) => (
         <line key={x} x1={x} y1="0" x2={x - 20} y2="180" stroke="#ffffff" strokeWidth="5" />
       ))}
@@ -27,8 +27,8 @@ function MapScene() {
       ))}
       <g transform="translate(14 12)">
         <rect width="118" height="26" rx="8" fill="#fff" />
-        <circle cx="14" cy="13" r="5" fill="#6366f1" />
-        <text x="26" y="17" fontSize="10" fontWeight="600" fill="#312e81" fontFamily="Plus Jakarta Sans Variable, sans-serif">
+        <circle cx="14" cy="13" r="5" fill="#2f6db5" />
+        <text x="26" y="17" fontSize="10" fontWeight="600" fill="#1d3a5c" fontFamily="Plus Jakarta Sans Variable, sans-serif">
           Heavy rain · Q.1
         </text>
       </g>
@@ -66,17 +66,17 @@ function PoseScene() {
         <line key={`${a}-${b}`} x1={j[a][0]} y1={j[a][1]} x2={j[b][0]} y2={j[b][1]} stroke="#67e8f9" strokeWidth="3" strokeLinecap="round" />
       ))}
       <circle cx={j.head[0]} cy={j.head[1]} r="11" fill="none" stroke="#67e8f9" strokeWidth="3" />
-      {Object.entries(j).map(([k, [x, y]]) => k !== "head" && <circle key={k} cx={x} cy={y} r="3.5" fill="#f0abfc" />)}
+      {Object.entries(j).map(([k, [x, y]]) => k !== "head" && <circle key={k} cx={x} cy={y} r="3.5" fill="#bae6fd" />)}
       <g transform="translate(196 132)">
         <rect width="108" height="30" rx="8" fill="#ffffff" />
         <text x="10" y="13" fontSize="8" fill="#6b7280" fontFamily="Plus Jakarta Sans Variable, sans-serif">
           Kick score
         </text>
-        <text x="10" y="25" fontSize="11" fontWeight="700" fill="#7c3aed" fontFamily="Plus Jakarta Sans Variable, sans-serif">
+        <text x="10" y="25" fontSize="11" fontWeight="700" fill="#2f6db5" fontFamily="Plus Jakarta Sans Variable, sans-serif">
           87 / 100
         </text>
-        <rect x="58" y="16" width="40" height="5" rx="2.5" fill="#ede9fe" />
-        <rect x="58" y="16" width="34" height="5" rx="2.5" fill="#7c3aed" />
+        <rect x="58" y="16" width="40" height="5" rx="2.5" fill="#dbeafe" />
+        <rect x="58" y="16" width="34" height="5" rx="2.5" fill="#2f6db5" />
       </g>
     </svg>
   );
@@ -166,17 +166,16 @@ export function ProjectCover({ project, large = false }: { project: Project; lar
   return (
     <div
       className={`relative overflow-hidden ${large ? "aspect-[16/11] lg:aspect-auto lg:h-full" : "aspect-[16/10]"}`}
-      style={{ backgroundImage: `linear-gradient(135deg, ${cover.from}, ${cover.to})` }}
+      style={{ backgroundColor: cover.tint }}
     >
       <div
-        className="absolute inset-0 opacity-25"
+        className="absolute inset-0"
         style={{
-          backgroundImage:
-            "linear-gradient(rgb(255 255 255 / .25) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / .25) 1px, transparent 1px)",
-          backgroundSize: "28px 28px",
+          backgroundImage: "radial-gradient(rgb(16 38 61 / .09) 1px, transparent 1px)",
+          backgroundSize: "18px 18px",
         }}
       />
-      <div className="absolute inset-x-[9%] top-[13%] bottom-0 overflow-hidden rounded-t-xl bg-white shadow-2xl shadow-black/30 transition-transform duration-500 group-hover:-translate-y-1.5">
+      <div className="absolute inset-x-[9%] top-[13%] bottom-0 overflow-hidden rounded-t-xl bg-white shadow-[0_10px_40px_-12px_rgb(16_38_61/0.25)] ring-1 ring-black/5 transition-transform duration-500 group-hover:-translate-y-1.5">
         <div className="flex h-6 items-center gap-1.5 border-b border-black/5 bg-[#f4f4f8] px-3">
           <span className="size-2 rounded-full bg-[#ff5f57]" />
           <span className="size-2 rounded-full bg-[#febc2e]" />
@@ -194,7 +193,7 @@ export function ProjectCover({ project, large = false }: { project: Project; lar
         src={cover.icon}
         alt=""
         loading="lazy"
-        className="absolute right-[4%] bottom-[6%] size-16 drop-shadow-xl transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 sm:size-20"
+        className="absolute right-[4%] bottom-[6%] size-16 drop-shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 sm:size-20"
       />
     </div>
   );

@@ -18,7 +18,7 @@ function Links({ project }: { project: Project }) {
       {demo && (
         <a
           href={demo}
-          className="bg-brand inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-semibold text-white"
+          className="inline-flex items-center gap-1.5 rounded-lg bg-brand px-3 py-1.5 text-sm font-semibold text-on-brand transition-colors hover:bg-brand-strong"
         >
           Live demo <ArrowUpRight className="size-4" />
         </a>
@@ -76,14 +76,14 @@ export function Projects() {
           <ProjectCover project={featured} large />
           <div className="flex flex-col gap-5 p-7 sm:p-9">
             <div>
-              <span className="rounded-full bg-accent/12 px-2.5 py-1 text-xs font-semibold text-accent">Featured</span>
+              <span className="rounded-full bg-brand-soft px-2.5 py-1 text-xs font-semibold text-accent">Featured</span>
               <h3 className="mt-4 text-2xl font-bold tracking-tight">{featured.name}</h3>
               <p className="mt-2 leading-relaxed text-muted">{featured.summary}</p>
             </div>
             <ul className="space-y-2.5 text-sm leading-relaxed">
               {featured.highlights.map((h) => (
                 <li key={h} className="flex gap-2.5">
-                  <span className="bg-brand mt-2 size-1.5 shrink-0 rounded-full" />
+                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-accent" />
                   <span>{h}</span>
                 </li>
               ))}
@@ -110,7 +110,7 @@ export function Projects() {
                 <ul className="space-y-2 text-sm leading-relaxed">
                   {p.highlights.map((h) => (
                     <li key={h} className="flex gap-2.5">
-                      <span className="bg-brand mt-2 size-1.5 shrink-0 rounded-full" />
+                      <span className="mt-2 size-1.5 shrink-0 rounded-full bg-accent" />
                       <span>{h}</span>
                     </li>
                   ))}

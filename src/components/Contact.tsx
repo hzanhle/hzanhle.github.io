@@ -20,13 +20,12 @@ export function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
       <Reveal>
-        <div className="bg-brand relative overflow-hidden rounded-3xl p-px">
-          <div className="relative rounded-[calc(1.5rem-1px)] bg-surface px-6 py-14 text-center sm:px-12 sm:py-20">
-            <div className="glow pointer-events-none absolute inset-0 opacity-70" />
-            <div className="relative">
+        <div className="rounded-3xl border border-line bg-brand-soft">
+          <div className="px-6 py-14 text-center sm:px-12 sm:py-20">
+            <div>
               <p className="font-mono text-sm text-accent">06 · Contact</p>
               <h2 className="mx-auto mt-3 max-w-2xl text-3xl font-extrabold tracking-tight sm:text-5xl">
-                Let's build something <span className="text-gradient">together</span>
+                Let's build something <span className="text-accent">together</span>
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-muted">
                 I'm looking for fresher and junior roles in fullstack or backend development. If you're hiring or just
@@ -36,7 +35,7 @@ export function Contact() {
               <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
                 <a
                   href={`mailto:${profile.email}`}
-                  className="bg-brand inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-white shadow-lg shadow-violet-500/25 transition-transform hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 font-semibold text-on-brand transition-colors hover:bg-brand-strong"
                 >
                   <Mail className="size-4" /> Email me
                 </a>
@@ -44,7 +43,7 @@ export function Contact() {
                   href={profile.linkedin}
                   className="inline-flex items-center gap-2 rounded-xl border border-line bg-surface px-5 py-3 font-semibold transition-colors hover:border-accent/50"
                 >
-                  <FaLinkedin className="size-4 text-[#0a66c2]" /> LinkedIn
+                  <FaLinkedin className="size-4 text-[#0a66c2] dark:text-[#70b5f9]" /> LinkedIn
                 </a>
                 <a
                   href={profile.github}

@@ -2,8 +2,8 @@ import { ArrowUpRight } from "lucide-react";
 import { profile } from "../data/profile";
 import { Reveal, Section } from "./Section";
 
-// Regenerated every 12 hours by the workflow in the hzanhle/hzanhle profile repo.
-const snake = `https://raw.githubusercontent.com/${profile.handle}/${profile.handle}/output`;
+// Regenerated every 12 hours by .github/workflows/snake.yml in this repo.
+const snake = `https://raw.githubusercontent.com/${profile.handle}/${profile.handle}.github.io/output`;
 
 export function Activity() {
   return (

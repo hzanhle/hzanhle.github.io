@@ -133,7 +133,7 @@ export type Project = {
   commits: string;
   period: string;
   links: { demo?: string; repo?: string };
-  cover: { icon: string; from: string; to: string; scene: "map" | "pose" | "booking" | "report" | "image"; image?: string };
+  cover: { icon: string; tint: string; scene: "map" | "pose" | "booking" | "report" | "image"; image?: string };
   featured?: boolean;
 };
 
@@ -153,7 +153,7 @@ export const projects: Project[] = [
     commits: "Top contributor · 46 of 60 commits",
     period: "May – Jul 2026",
     links: {},
-    cover: { icon: rainIcon, from: "#6366f1", to: "#06b6d4", scene: "map" },
+    cover: { icon: rainIcon, tint: "#d6e8f8", scene: "map" },
     featured: true,
   },
   {
@@ -169,7 +169,7 @@ export const projects: Project[] = [
     commits: "Top contributor · 137 commits",
     period: "Sep 2026 – Now",
     links: {},
-    cover: { icon: martialIcon, from: "#f43f5e", to: "#7c3aed", scene: "pose" },
+    cover: { icon: martialIcon, tint: "#f5e0e0", scene: "pose" },
   },
   {
     slug: "ev-rental",
@@ -184,7 +184,7 @@ export const projects: Project[] = [
     commits: "113 commits",
     period: "Sep 2025 – Jan 2026",
     links: { repo: "https://github.com/hzanhle/SWP391-GROUP2" },
-    cover: { icon: scooterIcon, from: "#10b981", to: "#0ea5e9", scene: "booking" },
+    cover: { icon: scooterIcon, tint: "#dde6ef", scene: "booking" },
   },
   {
     slug: "waste-collection",
@@ -199,7 +199,7 @@ export const projects: Project[] = [
     commits: "Top contributor · 64 of 95 commits",
     period: "Jan – Apr 2026",
     links: {},
-    cover: { icon: recycleIcon, from: "#65a30d", to: "#0d9488", scene: "report" },
+    cover: { icon: recycleIcon, tint: "#d7eee4", scene: "report" },
   },
   {
     slug: "autowash",
@@ -217,7 +217,7 @@ export const projects: Project[] = [
       demo: "https://car-washed-management.vercel.app",
       repo: "https://github.com/hzanhle/Car_washed_management",
     },
-    cover: { icon: carIcon, from: "#f97316", to: "#db2777", scene: "image", image: autowashShot },
+    cover: { icon: carIcon, tint: "#f2e7d3", scene: "image", image: autowashShot },
   },
 ];
 
