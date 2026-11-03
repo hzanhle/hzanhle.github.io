@@ -4,7 +4,10 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { profile } from "../data/profile";
 import { Reveal } from "./Section";
 
-export function Contact() {
+export function Contact({
+  eyebrow = "06 · Contact",
+  blurb = "I'm looking for fresher and junior roles in fullstack or backend development. If you're hiring or just want to talk shop, my inbox is open.",
+}: { eyebrow?: string; blurb?: string } = {}) {
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
@@ -23,13 +26,12 @@ export function Contact() {
         <div className="rounded-3xl border border-line bg-brand-soft">
           <div className="px-6 py-14 text-center sm:px-12 sm:py-20">
             <div>
-              <p className="font-mono text-sm text-accent">06 · Contact</p>
+              <p className="font-mono text-sm text-accent">{eyebrow}</p>
               <h2 className="mx-auto mt-3 max-w-2xl text-3xl font-extrabold tracking-tight sm:text-5xl">
                 Let's build something <span className="text-accent">together</span>
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-muted">
-                I'm looking for fresher and junior roles in fullstack or backend development. If you're hiring or just
-                want to talk shop, my inbox is open.
+                {blurb}
               </p>
 
               <div className="mt-9 flex flex-wrap items-center justify-center gap-3">

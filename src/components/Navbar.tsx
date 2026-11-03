@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { Download, Menu, Moon, Sun, X } from "lucide-react";
 import { profile } from "../data/profile";
 
-const links = [
+const defaultLinks = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
@@ -26,7 +26,18 @@ function useTheme() {
   return { dark, toggle };
 }
 
-export function Navbar() {
+type NavLink = { href: string; label: string };
+
+export function Navbar({
+  links = defaultLinks,
+  resumeUrl = profile.resumeUrl,
+  crossLink,
+}: {
+  links?: NavLink[];
+  resumeUrl?: string;
+  // A link to the site's other portfolio page, shown after the section links.
+  crossLink?: NavLink;
+} = {}) {
   const { dark, toggle } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -55,12 +66,22 @@ export function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="rounded-lg px-3 py-2 text-sm text-muted transition-colors hover:bg-surface-2 hover:text-fg"
+                className="rounded-lg px-3 py-2 text-sm whitespace-nowrap text-muted transition-colors hover:bg-surface-2 hover:text-fg"
               >
                 {l.label}
               </a>
             </li>
           ))}
+          {crossLink && (
+            <li className="ml-1 border-l border-line pl-2">
+              <a
+                href={crossLink.href}
+                className="rounded-lg px-3 py-2 text-sm font-medium whitespace-nowrap text-accent transition-colors hover:bg-surface-2"
+              >
+                {crossLink.label}
+              </a>
+            </li>
+          )}
         </ul>
 
         <div className="flex items-center gap-2">
@@ -71,9 +92,9 @@ export function Navbar() {
           >
             {dark ? <Sun className="size-4" /> : <Moon className="size-4" />}
           </button>
-          {profile.resumeUrl && (
+          {resumeUrl && (
             <a
-              href={profile.resumeUrl}
+              href={resumeUrl}
               className="hidden items-center gap-1.5 rounded-lg bg-brand px-3.5 py-2 text-sm font-medium text-on-brand transition-colors hover:bg-brand-strong sm:flex"
             >
               <Download className="size-4" /> Resume
@@ -109,6 +130,16 @@ export function Navbar() {
                 </a>
               </li>
             ))}
+            {crossLink && (
+              <li>
+                <a
+                  href={crossLink.href}
+                  className="block rounded-lg px-3 py-3 text-base font-medium text-accent hover:bg-surface-2"
+                >
+                  {crossLink.label}
+                </a>
+              </li>
+            )}
           </motion.ul>
         )}
       </AnimatePresence>
