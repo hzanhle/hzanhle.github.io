@@ -46,16 +46,10 @@ function Context() {
           </ul>
           <div className="mt-6 flex flex-wrap gap-2">
             <a
-              href={autowash.demo}
-              className="inline-flex items-center gap-1.5 rounded-lg bg-brand px-3 py-1.5 text-sm font-semibold text-on-brand transition-colors hover:bg-brand-strong"
-            >
-              Live demo <ArrowUpRight className="size-4" />
-            </a>
-            <a
               href={autowash.repo}
               className="inline-flex items-center gap-1.5 rounded-lg border border-line px-3 py-1.5 text-sm font-semibold transition-colors hover:border-accent/50"
             >
-              <FaGithub className="size-4" /> Code
+              <FaGithub className="size-4" /> Code <ArrowUpRight className="size-4" />
             </a>
           </div>
         </div>

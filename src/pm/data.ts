@@ -105,7 +105,6 @@ export const autowash = {
   role: "Fullstack Developer",
   team: "Team of 3",
   period: "May – Jul 2026",
-  demo: "https://car-washed-management.vercel.app",
   repo: "https://github.com/hzanhle/Car_washed_management",
   rulesDoc: "https://github.com/hzanhle/Car_washed_management/blob/main/client/docs/agent/product-rules.md",
   context:

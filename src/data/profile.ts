@@ -214,7 +214,6 @@ export const projects: Project[] = [
     commits: "Top contributor · 38 of 99 commits",
     period: "May – Jul 2026",
     links: {
-      demo: "https://car-washed-management.vercel.app",
       repo: "https://github.com/hzanhle/Car_washed_management",
     },
     cover: { icon: carIcon, tint: "#f2e7d3", scene: "image", image: autowashShot },
