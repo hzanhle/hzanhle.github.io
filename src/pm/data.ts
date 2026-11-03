@@ -2,52 +2,51 @@
 
 export const pmProfile = {
   openTo: "Open to Product Management Trainee roles",
-  lead: "An aspiring product manager who has built the features first.",
+  lead: "A final-year Software Engineering student moving from frontend development toward product.",
   tagline:
-    "I turn user problems and business goals into clear requirements, ship them with engineers and QA, then check the numbers to see whether they worked.",
+    "Below are a few projects where I worked on the product side: writing the rules and user stories, building them with the team, and thinking about how to measure the result.",
   // Put the CV at public/pm/resume.pdf, then set this to "/pm/resume.pdf" to show the Resume buttons.
   resumeUrl: "",
 };
 
 export const about = [
   "As a frontend developer, I kept running into the same problem: features weren't failing in the code. They were failing in the gap between what the business meant and what the ticket said. A missing edge case became a bug, and an undefined status became a two-day back-and-forth.",
-  "So I started working on that gap. On AutoWash I wrote the loyalty and voucher rules before the team wrote any code. On Medilab, my capstone, I co-write the feature specs our 5-person team builds from, then deliver features from them. Understanding the problem, and checking afterwards whether a feature moved the numbers, is the part of the work I enjoy most.",
+  "So I started paying more attention to that side. On AutoWash I wrote the loyalty and voucher rules with the team before we built them. On Medilab, my capstone, I help write the feature specs and then build features from them. That's the part of the work I enjoy most, and the part I want to keep learning.",
 ];
 
-// The four parts of the Product Management Trainee role, each with what I've already done.
 export type Pillar = { title: string; icon: "problem" | "data" | "build" | "team"; evidence: string[] };
 
 export const pillars: Pillar[] = [
   {
-    title: "Understand problems & find solutions",
+    title: "Writing requirements",
     icon: "problem",
     evidence: [
-      "Wrote AutoWash's product rules: roles, loyalty tiers, points, rewards and the booking lifecycle",
-      "Co-write Medilab's inventory and laboratory specs from the lab's business flows",
+      "Wrote AutoWash's loyalty and voucher rules with the team",
+      "Help write Medilab's inventory and lab feature specs",
     ],
   },
   {
-    title: "Analyze data & measure results",
+    title: "Working with data",
     icon: "data",
     evidence: [
-      "Built AutoWash's admin KPIs: bookings, completed washes, active customers, promotion usage",
-      "Use SQL and Excel to answer questions, and define success metrics before building",
+      "Built AutoWash's customer and admin dashboards",
+      "Use SQL and Excel to check questions against the data",
     ],
   },
   {
-    title: "Support product development",
+    title: "Building & testing",
     icon: "build",
     evidence: [
-      "Write user stories with testable acceptance criteria; Medilab's backlog has 186 of them",
-      "Delivered 11 Medilab features end to end and wrote AutoWash's pre-release test report",
+      "Build features from specs on Medilab and AutoWash",
+      "Wrote AutoWash's test report before release",
     ],
   },
   {
-    title: "Collaborate across teams",
+    title: "Working in teams",
     icon: "team",
     evidence: [
-      "AWS First Cloud Journey: a 5-person team working with AWS mentors, in English",
-      "Medilab: issues, pull requests and reviews with 4 teammates, the supervisor and a mentor",
+      "AWS First Cloud Journey: a team of 5 working with AWS mentors, in English",
+      "Medilab: issues, pull requests and reviews with 4 teammates",
     ],
   },
 ];
@@ -55,19 +54,19 @@ export const pillars: Pillar[] = [
 export const toolkit: { title: string; items: string[] }[] = [
   {
     title: "Product",
-    items: ["Problem framing", "PRDs & product rules", "User Stories & AC", "Prioritization", "UAT & launch testing", "Feedback loops"],
+    items: ["User stories & acceptance criteria", "Requirements & business rules", "Workflows", "Wireframing", "Testing before release"],
   },
   {
     title: "Data",
-    items: ["KPI definition", "SQL (PostgreSQL, SQL Server)", "Excel", "Dashboard reporting", "Funnel & repeat metrics", "Campaign evaluation"],
+    items: ["SQL (PostgreSQL, SQL Server)", "Excel", "Dashboards"],
   },
   {
-    title: "CRM & Payments",
-    items: ["Loyalty tiers", "Points & expiry", "Vouchers & promotions", "Redemption rules", "PayOS / VNPay flows", "Payment reconciliation"],
+    title: "Domains I've worked in",
+    items: ["Loyalty points & tiers", "Vouchers & promotions", "PayOS / VNPay payments", "Lab management"],
   },
   {
-    title: "Delivery & Tech",
-    items: ["Scrum & sprint planning", "Business flows (BPMN)", "REST API specs", "React / Next.js", "NestJS / .NET", "Odoo (Python)"],
+    title: "Engineering",
+    items: ["Scrum", "REST APIs", "React / Next.js", "NestJS / .NET", "Odoo (Python)"],
   },
 ];
 
@@ -103,8 +102,8 @@ export type Story = {
 
 export const autowash = {
   name: "AutoWash: loyalty, points & vouchers",
-  role: "Product & Fullstack Developer",
-  team: "Team of 3 · top contributor (38 of 99 commits)",
+  role: "Fullstack Developer",
+  team: "Team of 3",
   period: "May – Jul 2026",
   demo: "https://car-washed-management.vercel.app",
   repo: "https://github.com/hzanhle/Car_washed_management",
@@ -117,7 +116,7 @@ export const autowash = {
     "Never let a voucher or the same points be redeemed twice",
   ],
   owned: [
-    "Wrote the product rules doc the team built from: roles, tiers, points, rewards and the booking lifecycle",
+    "Wrote the loyalty rules with the team: tiers, points, rewards and the booking statuses",
     "Built the admin voucher and promotion screens",
     "Implemented points and voucher reservation in the booking service",
     "Delivered the customer and admin dashboards from the API",
@@ -316,7 +315,7 @@ export const loyaltyNext = [
 export const exercise = {
   scenario:
     "Users claim vouchers in a payment app, but many of those vouchers expire unused. The team wants more of them used, without just giving away bigger discounts.",
-  disclaimer: "A practice exercise with a made-up scenario. It uses no ZaloPay data and makes no claims about how ZaloPay works.",
+  disclaimer: "A practice exercise with a made-up scenario, not based on any company's data.",
   why: [
     "Unused vouchers are campaign budget that bought no behaviour change",
     "A user who claims and never redeems may be less likely to engage with the next campaign",
@@ -366,23 +365,16 @@ export const firstMove =
 
 export const medilab = {
   name: "Medilab: laboratory management system",
-  role: "Fullstack Developer & Spec Co-author",
+  role: "Fullstack Developer",
   team: "Capstone · Team of 5",
   period: "Sep 2026 – Present",
   repo: "https://github.com/SoltuneMontepre/medilab",
-  stakeholders: "Project supervisor and industry mentor (acting as Product Owner)",
+  stakeholders: "Project supervisor and an industry mentor",
   context:
-    "Medilab runs a testing laboratory end to end: customer orders and quotations, sample reception, testing and scheduling, result approval, signed reports, and the stock the lab uses along the way.",
-  stats: [
-    { value: "186", label: "User stories in the backlog" },
-    { value: "15", label: "Role-based feature specs" },
-    { value: "4", label: "Modules" },
-    { value: "11", label: "Features I delivered" },
-  ],
+    "Medilab runs a testing laboratory end to end: customer orders and quotations, sample reception, testing and scheduling, result approval, signed reports, and the stock the lab uses along the way. The team writes the specs first, split into 4 modules and one feature list per user role, then builds from them.",
   myPart: [
-    "Co-write the inventory and laboratory feature specs: user stories per role, business-rule tables and acceptance criteria",
-    "Deliver features end to end from those specs, with tests and updated docs",
-    "Turn questions from the mentor into decisions recorded in the business docs",
+    "Help write the inventory and laboratory feature specs: user stories, business rules and acceptance criteria",
+    "Build features from those specs, with tests and updated docs",
   ],
 };
 

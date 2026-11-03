@@ -28,7 +28,7 @@ export function About() {
 
         <div>
           <Reveal>
-            <p className="mb-3 text-sm font-semibold tracking-wide text-muted uppercase">What the role asks, and what I've done</p>
+            <p className="mb-3 text-sm font-semibold tracking-wide text-muted uppercase">What I've practised so far</p>
           </Reveal>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {pillars.map((p, i) => {
@@ -76,7 +76,7 @@ export function Toolkit() {
       id="toolkit"
       eyebrow="02 · Toolkit"
       title="How I work"
-      intro="The methods I use to get from a vague request to a feature the team can ship and measure, and the tools I use along the way."
+      intro="What I use day to day, on the product side and the engineering side."
     >
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {toolkit.map((g, i) => (

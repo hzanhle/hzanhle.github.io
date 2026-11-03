@@ -7,17 +7,7 @@ import { SubHeading } from "./ui";
 
 function Scope() {
   return (
-    <div className="space-y-6">
-      <ul className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-        {medilab.stats.map((s, i) => (
-          <Reveal key={s.label} delay={i * 0.06}>
-            <li className="card p-5 text-center">
-              <p className="text-3xl font-extrabold tracking-tight text-accent">{s.value}</p>
-              <p className="mt-1 text-sm text-muted">{s.label}</p>
-            </li>
-          </Reveal>
-        ))}
-      </ul>
+    <div>
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <Reveal className="min-w-0">
           <div className="card h-full p-6">
@@ -79,7 +69,7 @@ function Signing() {
           ))}
         </ul>
         <p className="mt-6 border-t border-line pt-4 text-sm text-muted">
-          I co-wrote this document and built three of its rules: locked signatures (#195), heads of department approving
+          I helped write this document and built three of these rules: locked signatures (#195), heads of department approving
           their own results (#336), and higher-level and backup signers (#430).
         </p>
       </div>
@@ -111,11 +101,11 @@ export function MedilabCase() {
       id="medilab"
       eyebrow="05 · Case study"
       title={medilab.name}
-      intro={`${medilab.role} · ${medilab.team} · ${medilab.period}. How a 186-story spec turns lab work into features a team of five can build.`}
+      intro={`${medilab.role} · ${medilab.team} · ${medilab.period}. My capstone: the team writes detailed specs first, then builds from them.`}
     >
       <div className="space-y-20">
         <div>
-          <SubHeading index="5.1" title="Scope & my part" />
+          <SubHeading index="5.1" title="Context & my part" />
           <Scope />
         </div>
         <div>
@@ -143,7 +133,7 @@ export function MedilabCase() {
           <StoryTabs items={medilabStories} label="Medilab user stories" />
         </div>
         <div>
-          <SubHeading index="5.5" title="What I delivered" intro="Eleven features so far, each traced from its spec to a merged pull request." />
+          <SubHeading index="5.5" title="Features I've built so far" />
           <Delivered />
         </div>
       </div>

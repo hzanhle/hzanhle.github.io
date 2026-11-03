@@ -212,7 +212,7 @@ export function LoyaltyCase() {
       id="loyalty"
       eyebrow="03 · Featured case study"
       title={autowash.name}
-      intro={`${autowash.role} · ${autowash.team} · ${autowash.period}. A loyalty program with tiers, points and vouchers, built so a customer can never redeem the same voucher or points twice.`}
+      intro={`${autowash.role} · ${autowash.team} · ${autowash.period}. A car wash booking app with a loyalty program: tiers, points and vouchers.`}
     >
       <div className="space-y-20">
         <div>
@@ -223,7 +223,7 @@ export function LoyaltyCase() {
           <SubHeading
             index="3.2"
             title="Loyalty & voucher rules"
-            intro="The product rules I wrote before the team built anything. They drove both the admin screens and the backend checks."
+            intro="The rules we agreed on before building. They shaped both the admin screens and the backend checks."
           />
           <Rules />
         </div>
