@@ -11,7 +11,7 @@ export const profile = {
   name: "Lê Nguyễn Hoàng Anh",
   shortName: "Hoàng Anh",
   handle: "hzanhle",
-  role: "Fullstack Developer",
+  role: "Full-Stack Developer",
   tagline: "I build web apps with .NET and React, and lately I've been wiring AI into them.",
   location: "Ho Chi Minh City, Vietnam",
   email: "leon2004work@gmail.com",
@@ -23,7 +23,7 @@ export const profile = {
 };
 
 export const about = [
-  "I'm a fullstack developer based in Ho Chi Minh City, finishing my Software Engineering degree at FPT University (class of 2026). Most of my work lives in C# / .NET and TypeScript: React and Next.js on the frontend, ASP.NET Core, NestJS or Spring Boot on the backend.",
+  "I'm a full-stack developer based in Ho Chi Minh City, finishing my Software Engineering degree at FPT University (class of 2026). Most of my work lives in C# / .NET and TypeScript: React and Next.js on the frontend, ASP.NET Core, NestJS or Spring Boot on the backend.",
   "In four of my five main team projects, I ended up as the top contributor by commits. Lately I've been focused on putting AI into real products: vision models that read traffic-camera images, and pose-estimation pipelines running behind a job queue.",
   "I'm also building my cloud skills on AWS through the First Cloud Journey program. When I'm not doing that, I make Roblox games in Lua.",
 ];
